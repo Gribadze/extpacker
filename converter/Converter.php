@@ -86,7 +86,7 @@ class Converter
                 break;
             }
 
-            copy($filelist[$i], $target . '/' . sprintf("bg-%02d.jpg", $i + 1));
+            copy($filelist[$i], $target . '/' . sprintf("bg-%d.jpg", $i + 1));
         }
     }
 
