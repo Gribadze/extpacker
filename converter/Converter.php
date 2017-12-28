@@ -79,15 +79,33 @@ class Converter
     {
         $source = 'resources/tmp/' . $this->basename . '/images';
         $target = 'resources/outputs/' . $this->basename . '/data/backgrounds';
+        $imageCount = 0;
 
         $filelist = glob($source . '/*.jpg');
-        for ($i = 0; $i < 25; $i++) {
+        for ($i = 0; $i < count($filelist); $i++) {
             if (!isset($filelist[$i])) {
                 break;
             }
 
             copy($filelist[$i], $target . '/' . sprintf("bg-%d.jpg", $i + 1));
+            $imageCount++;
         }
+        return $imageCount;
+    }
+
+    public function setConstants($imageCount)
+    {
+    	$cfgFile = 'resources/outputs/' . $this->basename . '/defaults.js';
+    	$cfgContent = file_get_contents($cfgFile);
+    	if ($cfgContent) {
+		    $cfgContent = str_replace('window.fs_bg_count=19', 'window.fs_bg_count=' . $imageCount, $cfgContent);
+		    unlink($cfgFile);
+		    $fp = fopen($cfgFile, 'w');
+		    fwrite($fp, $cfgContent);
+		    fclose($fp);
+	    } else {
+		    throw new \Exception('Fail to open ' . $cfgFile);
+	    }
     }
 
     public function convertScreenshots($size)

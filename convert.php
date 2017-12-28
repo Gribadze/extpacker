@@ -30,7 +30,10 @@ foreach ($filelist as $filename) {
     $converter->restoreTemplate();
 
     // Rename images
-    $converter->copyRenamedImages();
+    $imageCount = $converter->copyRenamedImages();
+
+    // Set images count
+	$converter->setConstants($imageCount);
 
     // Convert 440px images
     $converter->convertScreenshots(440);
