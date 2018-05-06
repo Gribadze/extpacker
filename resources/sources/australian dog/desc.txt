@@ -1,0 +1,31 @@
+{
+   "name": {
+      "message": "Noragami HD Wallpapers"
+   },
+   
+   "short-desc": 
+   {
+      "message": "The best selection of wallpaper Noragami for your chrome... Install and enjoy"
+   },
+   
+   "func-desc":
+   {
+      "message": " FEATURES:
+      Beautiful wallpaper of anime Noragami, with his characters: Yato, Yukine, Iki Hiyori, Nora, Kazuma, Sakura, Ebisu, Mayu, and other...
+	  Make your Google Chrome looking even better! We are appreciated about any feedback and your thoughts. Feel free to support us by sharing and telling other friends about this design.
+	  
+      - Select your favorite wallpaper from many available wallpapers, or Shuffle (randomized background images). 
+- Check Date & Time instantly with a digital clock in Chrome NewTab.
+- Search with Google in the new Chrome new tab page.
+- Images are included, make it loads faster. Work offline (the addon does not download anything when you open a new tab).
+
+
+
+*********************
+ New wallpapers are coming soon!
+*********************
+
+
+"
+   }
+}
